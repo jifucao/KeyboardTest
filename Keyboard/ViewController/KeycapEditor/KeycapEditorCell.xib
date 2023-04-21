@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="KeycapEditorCell" id="X4i-aa-Daj" customClass="KeycapEditorCell" customModule="AGA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="297" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3s5-9g-CaY">
+                    <rect key="frame" x="0.0" y="20" width="244" height="21"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-yO-yn8">
+                            <rect key="frame" x="0.0" y="0.0" width="155" height="21"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Space" drawsBackground="YES" id="kjS-Tp-kDm">
+                                <font key="font" usesAppearanceFont="YES"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bnu-Sb-ue7">
+                            <rect key="frame" x="170" y="-3" width="78" height="25"/>
+                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="XC0-z6-m3S" id="GLQ-BW-wdr">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="menu"/>
+                                <menu key="menu" id="byF-W2-Odi">
+                                    <items>
+                                        <menuItem title="Item 1" state="on" id="XC0-z6-m3S"/>
+                                        <menuItem title="Item 2" id="bMs-Nx-q7l"/>
+                                        <menuItem title="Item 3" id="MBF-AH-Zd1"/>
+                                    </items>
+                                </menu>
+                            </popUpButtonCell>
+                        </popUpButton>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="244" id="UDM-qk-yKx"/>
+                        <constraint firstAttribute="height" constant="21" id="r60-qj-wVG"/>
+                    </constraints>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3s5-9g-CaY" firstAttribute="centerY" secondItem="X4i-aa-Daj" secondAttribute="centerY" id="byO-st-eAw"/>
+                <constraint firstItem="3s5-9g-CaY" firstAttribute="leading" secondItem="X4i-aa-Daj" secondAttribute="leading" id="gH9-3O-Iiq"/>
+            </constraints>
+            <connections>
+                <outlet property="nameLabel" destination="xg9-yO-yn8" id="VWw-BV-juW"/>
+                <outlet property="typeButton" destination="bnu-Sb-ue7" id="rfd-RE-Tht"/>
+            </connections>
+            <point key="canvasLocation" x="-48.5" y="182"/>
+        </customView>
+    </objects>
+</document>
